@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    char inputChar, resultChar;
+
+    printf("請輸入一個字母字符: ");
+    scanf("%c", &inputChar);
+
+    if (inputChar >= 'a' && inputChar <= 'z') {
+        resultChar = inputChar - 'a' + 'A';
+    } else if (inputChar >= 'A' && inputChar <= 'Z') {
+        resultChar = inputChar - 'A' + 'a';
+    } else {
+        resultChar = inputChar;  
+    }
+
+    printf("大小寫互換後的字符是: %c\n", resultChar);
+
+    return 0;
+}
